@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lauren Bolte's Website</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="sidebar">
+    <img src="avatar.jpg" alt="Avatar" class="avatar">
+    <h1 class="name">LAUREN BOLTE</h1>
+    <nav class="sidebar-nav">
+      <a href="#about" class="sidebar-link">ABOUT</a>
+      <a href="#projects" class="sidebar-link">PROJECTS</a>
+      <a href="#courses" class="sidebar-link">COURSES</a>
+      <a href="#skills" class="sidebar-link">SKILLS</a>
+    </nav>
+  </div>
+
+  <div class="content">
+
+    <section id="about">
+      <h2>ABOUT</h2>
+      <h3>RESUME</h3>
+
+      <div class="resume-container">
+        <iframe 
+          src="public/resume.pdf" 
+          width="100%" 
+          height="800px">
+        </iframe>
+      </div>
+
+      <p>
+        <a href="public/resume.pdf" download class="download-btn">
+          Download Resume (PDF)
+        </a>
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2>PROJECTS</h2>
+      <h3>Academic Projects</h3>
+      <p>Details of academic projects</p>
+
+      <h3>Working Papers</h3>
+      <p>Your working papers content...</p>
+    </section>
+
+    <section id="courses">
+      <h2>COURSES</h2>
+      <h3>Data Science</h3>
+      <p>Course details...</p>
+
+      <h3>Political Science</h3>
+      <p>Course details...</p>
+    </section>
+
+    <section id="skills">
+      <h2>SKILLS</h2>
+      <p>Your skills...</p>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
