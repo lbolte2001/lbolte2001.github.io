@@ -1,73 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lauren Bolte's Website</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+<title>Lauren Bolte</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+
 </head>
+
 <body>
 
-  <div class="sidebar">
-    <img src="avatar.jpg" alt="Avatar" class="avatar">
-    <h1 class="name">LAUREN BOLTE</h1>
-    <nav class="sidebar-nav">
-      <a href="#about" class="sidebar-link">ABOUT</a>
-      <a href="#projects" class="sidebar-link">PROJECTS</a>
-      <a href="#courses" class="sidebar-link">COURSES</a>
-      <a href="#skills" class="sidebar-link">SKILLS</a>
-    </nav>
-  </div>
+<div class="sidebar">
 
-  <div class="content">
+<img src="avatar.jpg" class="avatar">
 
-    <section id="about">
-      <h2>ABOUT</h2>
-      <h3>RESUME</h3>
+<div class="name">LAUREN BOLTE</div>
 
-      <div class="resume-container">
-        <iframe 
-          src="public/resume.pdf" 
-          width="100%" 
-          height="800px">
-        </iframe>
-      </div>
+<nav>
+<a href="#about" class="nav-link">ABOUT</a>
+<a href="#projects" class="nav-link">PROJECTS</a>
+<a href="#courses" class="nav-link">COURSES</a>
+<a href="#skills" class="nav-link">SKILLS</a>
+</nav>
 
-      <p>
-        <a href="public/resume.pdf" download class="download-btn">
-          Download Resume (PDF)
-        </a>
-      </p>
-    </section>
+</div>
 
-    <section id="projects">
-      <h2>PROJECTS</h2>
-      <h3>Academic Projects</h3>
-      <p>Details of academic projects</p>
 
-      <h3>Working Papers</h3>
-      <p>Your working papers content...</p>
-    </section>
+<div class="content">
 
-    <section id="courses">
-      <h2>COURSES</h2>
-      <h3>Data Science</h3>
-      <p>Course details...</p>
+<section id="about">
+<h1>ABOUT</h1>
 
-      <h3>Political Science</h3>
-      <p>Course details...</p>
-    </section>
+<h2>RESUME</h2>
 
-    <section id="skills">
-      <h2>SKILLS</h2>
-      <p>Your skills...</p>
-    </section>
+<p>
+Insert resume description here. This section can contain a downloadable
+PDF or an embedded resume.
+</p>
 
-  </div>
+</section>
+
+
+
+<section id="projects">
+<h1>PROJECTS</h1>
+
+<h2>Coursework</h2>
+
+<p>
+Project descriptions here.
+</p>
+
+<h2>MS CSS Capstone</h2>
+
+<p>
+Capstone project information here.
+</p>
+
+</section>
+
+
+
+<section id="courses">
+<h1>COURSES</h1>
+
+<p>
+List relevant coursework here.
+</p>
+
+</section>
+
+
+
+<section id="skills">
+<h1>SKILLS</h1>
+
+<p>
+List technical skills here.
+</p>
+
+</section>
+
+
+</div>
+
+
+<script>
+
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-link");
+
+window.addEventListener("scroll", () => {
+
+let current = "";
+
+sections.forEach(section => {
+
+const sectionTop = section.offsetTop;
+const sectionHeight = section.clientHeight;
+
+if (scrollY >= sectionTop - 200) {
+current = section.getAttribute("id");
+}
+
+});
+
+navLinks.forEach(link => {
+
+link.classList.remove("active");
+
+if (link.getAttribute("href") === "#" + current) {
+link.classList.add("active");
+}
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
 
   <script src="script.js"></script>
 </body>
